@@ -11,8 +11,8 @@
         <ScrollViewer Grid.Column="1" Grid.Row="1" Background="#FFF1F1F1">
             <StackPanel Width="815">
                 <TextBlock Text="Films" Margin="10" FontSize="22" FontWeight="Medium"/>
-                <StackPanel Margin="20 0" Height="450">
-                    <ListView  x:Name="ListViewFilms" SelectionChanged="ListBoxFilm_SelectionChanged" Width="778" Height="488">
+                <StackPanel Margin="20 0" Height="490">
+                    <ListView  x:Name="ListViewFilms" SelectionChanged="ListBoxFilm_SelectionChanged" Width="778" Height="490">
                         <ListView.View>
 
                             <GridView>
