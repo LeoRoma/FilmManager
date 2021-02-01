@@ -65,7 +65,7 @@ namespace FilmListHelperView
             {
                 MessageBox.Show("Film already exists in your list!");
             }
-            
+            Reset();
         }
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
@@ -73,6 +73,7 @@ namespace FilmListHelperView
             _filmCRUDController.DeleteFilm(_filmCRUDController.SelectedFilm.FilmId);
             MessageBox.Show("Film deleted successfully");
             PopulateFilms();
+            Reset();
         }
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
@@ -81,6 +82,15 @@ namespace FilmListHelperView
             _filmCRUDController.UpdateFilm(_filmCRUDController.SelectedFilm.FilmId, title);
             MessageBox.Show("Film updted successfully");
             PopulateFilms();
+            Reset();
+
+        }
+
+        public void Reset()
+        {
+            TextBoxFilmTitle.Text = "";
+            FilmTitle.Text = "";
+            Date.Text = "";
         }
     }
 }
