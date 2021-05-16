@@ -14,7 +14,8 @@ namespace FilmListHelperController.Controllers
         {
             using(var db = new FilmListHelperDbContext())
             {
-                var filmList = db.Films.ToList();
+                var filmList = db.Films.OrderBy(f => f.FilmTitle).ToList();
+                
                 return filmList;
             }   
         }
